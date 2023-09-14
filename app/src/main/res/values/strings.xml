@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">shopp_in</string>
+
+
+
+    <string name="myMessage">پیام های من</string>
+    <string name="hintComment">پیام خود را وارد نمایید</string>
+    <string name="enter_message">ابتدا متنی وارد کنید</string>
+
+
+</resources>
