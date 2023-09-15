@@ -108,6 +108,13 @@ dependencies {
     // Lifecycles only (without ViewModel or LiveData)
     implementation(deps.lifecycle)
 
+    /**
+     * Navigation component
+     * https://developer.android.com/guide/navigation/navigation-getting-started
+     * */
+    implementation(deps.navigation_fragment)
+    implementation(deps.navigation_ui)
+
 
     /**
      * Android Logger

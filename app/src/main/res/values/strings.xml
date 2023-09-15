@@ -1,11 +1,14 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">shopp_in</string>
-
-
-
-    <string name="myMessage">پیام های من</string>
-    <string name="hintComment">پیام خود را وارد نمایید</string>
-    <string name="enter_message">ابتدا متنی وارد کنید</string>
+    <string name="wallet_balance">موجودی کیف پول</string>
+    <string name="inventory_increase">افزایش موجودی</string>
+    <string name="circulation_wallet">گردش کیف</string>
+    <string name="karid_with_wallet">خرید با کیف</string>
+    <string name="services">خدمات</string>
+    <string name="internet">بسته اینترنت</string>
+    <string name="charge">شارژ</string>
+    <string name="bill">قبض</string>
+    <string name="charity">نیکوکاری</string>
 
 
 </resources>

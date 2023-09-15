@@ -6,20 +6,19 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/bg_custom_appbar">
+        android:layout_height="100dp"
+        android:background="@color/background">
 
         <ImageButton
             android:id="@+id/end_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_16"
-            android:visibility="gone"
             android:background="?attr/selectableItemBackgroundBorderless"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/ic_baseline_arrow" />
+            tools:srcCompat="@drawable/ic_arrow_back" />
 
         <ImageButton
             android:id="@+id/start_icon"
@@ -29,19 +28,22 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_setting" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_marginBottom="27dp"
+            android:fontFamily="@font/iran_sans_mobile_fa_num_black"
             android:text=""
-            android:layout_marginBottom="@dimen/margin_8"
-            android:layout_marginEnd="@dimen/margin_32"
-            android:textColor="@color/black"
+            android:textColor="@android:color/white"
             android:textSize="@dimen/font_18"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/end_icon"
+            app:layout_constraintStart_toEndOf="@+id/start_icon"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Page Title" />
 

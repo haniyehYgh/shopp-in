@@ -28,6 +28,8 @@ ext.versions = [
 
         gson             : '2.8.6',
 
+        navigation            : '2.4.1',
+
         hilt             : '2.38.1',
         hilt_lifecycle   : '1.0.0-alpha03',
         hilt_androidx    : '1.0.0',
@@ -65,10 +67,14 @@ ext.deps = [
         okhttp_logging    : "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
 
 
+
         viewmodel_ktx     : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
         livedata          : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle",
         lifecycle         : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle",
 
+
+        navigation_fragment   : "androidx.navigation:navigation-fragment-ktx:$versions.navigation",
+        navigation_ui         : "androidx.navigation:navigation-ui-ktx:$versions.navigation",
 
         hilt              : "com.google.dagger:hilt-android:$versions.hilt",
         hilt_compiler     : "com.google.dagger:hilt-android-compiler:$versions.hilt",

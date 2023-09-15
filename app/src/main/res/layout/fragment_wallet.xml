@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <com.example.shoppin.customs.CustomAppbar
+            android:id="@+id/main_appbar_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:customEndIcon="@drawable/ic_arrow_back"
+            app:customStartIcon="@drawable/ic_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/wallet_layout"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_12"
+            android:background="@drawable/wallet_purple"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_appbar_layout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_82"
+                android:text="@string/wallet_balance"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_12"
+                android:id="@+id/wallet_balance_value"
+                tools:text="44,0000 ریال"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_24"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/kharid_layout"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:background="@drawable/bg_all_corners_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/circulation_wallet_layout"
+            app:layout_constraintTop_toBottomOf="@+id/wallet_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/withdraw"
+                android:padding="@dimen/margin_8"
+                android:text="@string/karid_with_wallet"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/circulation_wallet_layout"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:background="@drawable/bg_all_corners_black"
+            app:layout_constraintLeft_toRightOf="@+id/charge_wallet_layout"
+            app:layout_constraintRight_toLeftOf="@+id/kharid_layout"
+            app:layout_constraintTop_toBottomOf="@+id/wallet_layout">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/wallet_balance"
+                android:padding="@dimen/margin_8"
+                android:text="@string/circulation_wallet"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/charge_wallet_layout"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:background="@drawable/bg_all_corners_black"
+            app:layout_constraintEnd_toStartOf="@+id/circulation_wallet_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wallet_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/wallet_balance"
+                android:padding="@dimen/margin_8"
+                android:text="@string/inventory_increase"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_32"
+            android:background="@drawable/bg_top_corners_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circulation_wallet_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"
+                android:id="@+id/services_title"
+                android:layout_marginRight="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_14"
+                android:text="@string/services"
+                android:textStyle="bold"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/charge_internet_layout"
+                android:weightSum="2"
+                android:layout_marginRight="@dimen/margin_14"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_24"
+                app:layout_constraintTop_toBottomOf="@+id/services_title">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_12"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:padding="@dimen/margin_24"
+                    android:text="@string/internet"
+                    android:gravity="center|right"
+                    android:drawableRight="@drawable/internet_color"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_all_corners_stroke"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_12"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:padding="@dimen/margin_24"
+                    android:text="@string/charge"
+                    android:gravity="center|right"
+                    android:drawableRight="@drawable/simcard_color"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_all_corners_stroke"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginRight="@dimen/margin_14"
+                android:layout_marginLeft="@dimen/margin_14"
+                android:layout_marginTop="@dimen/margin_24"
+                app:layout_constraintTop_toBottomOf="@+id/charge_internet_layout">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_12"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:padding="@dimen/margin_24"
+                    android:text="@string/charity"
+                    android:gravity="center|right"
+                    android:drawableRight="@drawable/charity"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_all_corners_stroke"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_12"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:padding="@dimen/margin_24"
+                    android:text="@string/bill"
+                    android:gravity="center|right"
+                    android:drawableRight="@drawable/bill_primery"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_all_corners_stroke"/>
+
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

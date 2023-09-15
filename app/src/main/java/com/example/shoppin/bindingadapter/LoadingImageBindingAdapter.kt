@@ -19,7 +19,7 @@ class LoadImageBindingAdapter {
         fun setImageUrl(imgView: ImageView, imgUrl: String?) {
 
             imgUrl?.let {
-                val imgUri = it.toUri().buildUpon().scheme("https").build()
+  /*              val imgUri = it.toUri().buildUpon().scheme("https").build()
                 Glide.with(imgView.context)
                     .load(imgUri)
                     .apply(
@@ -27,7 +27,7 @@ class LoadImageBindingAdapter {
                             .placeholder(R.drawable.ic_not_message)
                             .error(R.drawable.ic_not_message)
                     )
-                    .into(imgView)
+                    .into(imgView)*/
             }
         }
 
