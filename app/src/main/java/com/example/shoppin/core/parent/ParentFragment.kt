@@ -6,7 +6,6 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
 import com.example.shoppin.core.base.BaseAndroidViewModel
 import com.example.shoppin.core.base.BaseFragment
-import com.example.shoppin.core.model.UiState
 
 
 abstract class ParentFragment<T : BaseAndroidViewModel, E : ViewDataBinding> : BaseFragment<E>() {
@@ -23,14 +22,6 @@ abstract class ParentFragment<T : BaseAndroidViewModel, E : ViewDataBinding> : B
             onShowError(status)
         }
 
-        viewModel.getUiState().observe(this) { state ->
-            state?.let {
-                when (it) {
-                    UiState.LOADING -> showLoading()
-                    UiState.HIDELOADING -> hideLoading()
-                }
-            }
-        }
     }
 
 }

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_bottemsheet">
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/margin_12"
+            android:background="@color/grayishBrown_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_charge_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginRight="@dimen/margin_12"
+            android:drawableRight="@drawable/wallet_balance"
+            android:drawablePadding="@dimen/margin_8"
+            android:padding="@dimen/margin_12"
+            android:text="@string/title_charge_wallet"
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_line" />
+
+
+        <TextView
+            android:id="@+id/minimum_value"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginRight="@dimen/margin_24"
+            android:text="@string/minimum_message_charge_wallet"
+            android:textColor="@color/grayishBrown_primary_variant"
+            android:textSize="@dimen/margin_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_charge_wallet" />
+
+        <EditText
+            android:id="@+id/amount_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_18"
+            android:layout_marginRight="@dimen/margin_12"
+            android:backgroundTint="@color/white"
+            android:drawableRight="@drawable/balance"
+            android:inputType="number"
+            android:drawablePadding="@dimen/margin_8"
+            android:hint="@string/amount"
+            android:gravity="center|right"
+            android:textCursorDrawable="@drawable/bg_textcursor"
+            android:padding="@dimen/margin_12"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minimum_value" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:textColor="@color/grayishBrown_primary_variant"
+            android:textSize="@dimen/margin_12"
+            android:id="@+id/rials_number_toLetters"
+            tools:text="مبلغ فارسی"
+            android:layout_marginRight="@dimen/margin_18"
+            android:layout_marginLeft="@dimen/margin_18"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amount_et"/>
+
+
+        <com.example.shoppin.customs.CustomButton
+            android:id="@+id/submit_cb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_48"
+            android:layout_marginRight="@dimen/margin_12"
+            android:layout_marginBottom="@dimen/margin_12"
+            app:customButtonTitle="@string/continua"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rials_number_toLetters"
+            app:typeButton="1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

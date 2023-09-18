@@ -5,11 +5,11 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 @Database(
-    entities = [MessageEntity::class,CommentEntity::class],
-    version = 12,
+    entities = [BankEntity::class,TransactionEntity::class],
+    version = 5,
     exportSchema = false
 )
-@TypeConverters(CommentTypeConvertor::class)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun messageDao(): MessageDao
+    abstract fun bankDao(): BankDao
+    abstract fun transactionDao(): TransactionDao
 }

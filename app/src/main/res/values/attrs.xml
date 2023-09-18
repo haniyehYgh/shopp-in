@@ -8,4 +8,10 @@
         <attr name="customPageTitle" format="integer" />
     </declare-styleable>
 
+
+    <declare-styleable name="CustomButton">
+        <attr name="typeButton" format="integer" />
+        <attr name="customButtonTitle" format="integer" />
+    </declare-styleable>
+
 </resources>

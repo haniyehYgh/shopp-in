@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <com.example.shoppin.customs.CustomAppbar
+            android:id="@+id/main_appbar_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:customEndIcon="@drawable/ic_arrow_back"
+            app:customPageTitle="@string/receipt_transaction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_18"
+            android:layout_marginRight="@dimen/margin_18"
+            android:layout_marginBottom="@dimen/margin_52"
+            android:background="@drawable/bg_all_corner_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_appbar_layout">
+
+            <ImageView
+                android:id="@+id/smile_im"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="@dimen/margin_12"
+                android:src="@drawable/smile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_receipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:text="شارژ کیف پول"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/smile_im" />
+
+            <TextView
+                android:id="@+id/disc_receipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                android:text="عملیات با موفقیت انجام شد"
+                android:textColor="@color/grayishBrown_primary_variant"
+                android:textSize="@dimen/font_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_receipt" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="@dimen/margin_18"
+                android:layout_marginTop="@dimen/margin_18"
+                android:layout_marginRight="@dimen/margin_18"
+                android:layout_marginBottom="@dimen/margin_18"
+                android:background="@drawable/bg_receipt_succsess"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/disc_receipt">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_cemicircle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/dash_view"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_dotted"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:rotation="180"
+                    android:src="@drawable/ic_cemicircle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_48"
+                    android:layout_marginRight="@dimen/margin_18"
+                    android:text="مبلغ :"
+                    android:textColor="@color/grayishBrown_primary_variant"
+                    android:textSize="@dimen/font_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/amount_receipt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_18"
+                    android:layout_marginTop="@dimen/margin_48"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="20000 ریال" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:layout_marginRight="@dimen/margin_18"
+                    android:text="شماره کارت :"
+                    android:textColor="@color/grayishBrown_primary_variant"
+                    android:textSize="@dimen/font_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amount_receipt" />
+
+                <TextView
+                    android:id="@+id/cardNo_receipt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_18"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/amount_receipt"
+                    tools:text="6363-1423-1234-1234" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:layout_marginRight="@dimen/margin_18"
+                    android:text="تاریخ و زمان :"
+                    android:textColor="@color/grayishBrown_primary_variant"
+                    android:textSize="@dimen/font_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dash_view" />
+
+                <TextView
+                    android:id="@+id/date_receipt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_18"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dash_view"
+                    tools:text="1402/2/2 13:50" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:layout_marginRight="@dimen/margin_18"
+                    android:text="شماره پیگیری :"
+                    android:textColor="@color/grayishBrown_primary_variant"
+                    android:textSize="@dimen/font_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/date_receipt" />
+
+                <TextView
+                    android:id="@+id/refNo_receipt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_18"
+                    android:layout_marginTop="@dimen/margin_24"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_16"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/date_receipt"
+                    tools:text="12223333444555" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

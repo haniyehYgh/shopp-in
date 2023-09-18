@@ -5,7 +5,6 @@ import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
 import com.example.shoppin.core.base.BaseActivity
 import com.example.shoppin.core.base.BaseAndroidViewModel
-import com.example.shoppin.core.model.UiState
 
 
 abstract class ParentActivity<T : BaseAndroidViewModel,E:ViewDataBinding> : BaseActivity<E>() {
@@ -22,13 +21,5 @@ abstract class ParentActivity<T : BaseAndroidViewModel,E:ViewDataBinding> : Base
                onShowError(status)
           }
 
-          viewModel.getUiState().observe(this){state ->
-               state?.let {
-                    when(it){
-                         UiState.LOADING -> onShowLoading()
-                         UiState.HIDELOADING -> onHideLoading()
-                    }
-               }
-          }
      }
 }

@@ -7,7 +7,7 @@ import timber.log.Timber
 
 abstract class BaseApp : MultiDexApplication() {
 
-
+    abstract fun logoutAndRestart()
     override fun onCreate() {
         super.onCreate()
         if (BuildConfig.DEBUG) {

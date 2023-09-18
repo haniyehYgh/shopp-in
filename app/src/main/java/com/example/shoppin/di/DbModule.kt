@@ -2,9 +2,7 @@ package com.example.shoppin.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.shoppin.data.local.AppDatabase
-import com.example.shoppin.data.local.DatabaseConstants
-import com.example.shoppin.data.local.MessageEntity
+import com.example.shoppin.data.local.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,10 +25,18 @@ object DbModule {
 
     @Provides
     @Singleton
-    fun provideData(db:AppDatabase)=db.messageDao()
+    @BankDaoQualifier
+    fun provideBankDao(db: AppDatabase) = db.bankDao()
 
     @Provides
-    fun provideEntity()=MessageEntity()
+    @Singleton
+    @TransactionDaoQualifier
+    fun provideTransactionDao(db: AppDatabase) = db.transactionDao()
+
+
+
+    @Provides
+    fun provideEntity()=BankEntity()
 
 
 }

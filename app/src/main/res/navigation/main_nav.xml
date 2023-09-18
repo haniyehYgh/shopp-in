@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,5 +8,47 @@
         android:id="@+id/walletFragment"
         android:name="com.example.shoppin.ui.WalletFragment"
         android:label="WalletFragment"
-        tools:layout="@layout/fragment_wallet"/>
+        tools:layout="@layout/fragment_wallet">
+        <action
+            android:id="@+id/action_walletFragment_to_amountChargeWalletBS"
+            app:destination="@id/amountChargeWalletBS" />
+        <action
+            android:id="@+id/action_walletFragment_to_circulationWalletFragment"
+            app:destination="@id/circulationWalletFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/amountChargeWalletBS"
+        android:name="com.example.shoppin.ui.chargeWallet.AmountChargeWalletBS"
+        android:label="AmountChargeWalletBS"
+        tools:layout="@layout/bs_amount_charge_wallet">
+
+
+        <action
+            android:id="@+id/action_amountChargeWalletBS_to_cartChargeWalletBS"
+            app:destination="@id/cartChargeWalletBS" />
+    </dialog>
+    <dialog
+        android:id="@+id/cartChargeWalletBS"
+        android:name="com.example.shoppin.ui.chargeWallet.CartChargeWalletBS"
+        android:label="CartChargeWalletBS"
+        tools:layout="@layout/bs_cart_charge_wallet">
+        <argument
+            android:name="amount"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true"/>
+        <action
+            android:id="@+id/action_cartChargeWalletBS_to_receiptFragment"
+            app:destination="@id/receiptFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/receiptFragment"
+        android:name="com.example.shoppin.ui.receipt.ReceiptFragment"
+        android:label="ReceiptFragment"
+        tools:layout="@layout/fragment_receipt"/>
+    <fragment
+        android:id="@+id/circulationWalletFragment"
+        android:name="com.example.shoppin.ui.circulationWallet.CirculationWalletFragment"
+        android:label="CirculationWalletFragment"
+        tools:layout="@layout/fragment_circulation_wallet"/>
 </navigation>

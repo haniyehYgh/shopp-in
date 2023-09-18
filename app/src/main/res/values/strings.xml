@@ -9,6 +9,34 @@
     <string name="charge">شارژ</string>
     <string name="bill">قبض</string>
     <string name="charity">نیکوکاری</string>
+    <string name="rial">ریال</string>
+    <string name="forbidden">غیر مجاز</string>
+    <string name="continua">ادامه</string>
+    <string name="back">بازگشت</string>
+    <string name="amount">مبلغ</string>
+    <string name="minimum_message_charge_wallet">حداقل مبلغ افزایش موجودی کیف پول 10,000 ریال است.</string>
+    <string name="title_charge_wallet">افزایش موجودی کیف پول</string>
+    <string name="input_pass">ورود رمز</string>
+    <string name="receipt_transaction">رسید تراکنش</string>
+    <string name="cart_no">شماره کارت</string>
+    <string name="message_cvv2">عدد3 یا 4 رقمی درج شده برروی کارت بانکی شما است.</string>
+    <string name="secound_pass">رمز دوم کارت</string>
+    <string name="get_ramz_poya">دریافت رمز پویا</string>
+    <string name="month">ماه</string>
+    <string name="year">سال</string>
+    <string name="ayandeh">آینده</string>
+    <string name="en_bank">اقتصادنوین</string>
+    <string name="pasargad">پاسارگاد</string>
+    <string name="refah">رفاه</string>
+    <string name="day">دی</string>
+    <string name="saman">سامان</string>
+    <string name="sepah">سپه</string>
+    <string name="gardeshgary">گردشگری</string>
+    <string name="meli">ملی</string>
+    <string name="shahr">شهر</string>
+    <string name="maskan">مسکن</string>
+    <string name="saderat">صادرات</string>
+    <string name="compelet_message">این بخش بزودی کامل می شود.</string>
 
 
 </resources>
